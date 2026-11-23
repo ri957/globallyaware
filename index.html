@@ -1,0 +1,213 @@
+<!--Bootstrap-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="author" content="Tara-Lee Pitter and Elvis Atakorah">
+
+    <title>Globally aware</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <!-- Your own CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="text-center text-white py-5">
+        <h1>Globally aware</h1>
+        <p>Smallest actions can make the biggest difference</p>
+    </header>
+
+    <!-- NAVIGATION BAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success sticky-top">
+        <div class="container">
+
+            <a class="navbar-brand" href="#">Eco-Friendly Living</a>
+
+            <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#reduce">Reduce</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#reuse">Reuse</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#recycle">Recycle</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tips">Eco Tips</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main class="container my-5">
+
+        <div class="row g-4">
+
+            <!-- REDUCE SECTION -->
+            <div class="col-md-6 col-lg-3">
+                <section class="card h-100 shadow" id="reduce">
+
+                    <img src="reduce.jpg"
+                         class="card-img-top"
+                         alt="Reducing waste">
+
+                    <div class="card-body">
+                        <h2 class="card-title">1. Reduce</h2>
+
+                        <p class="card-text">
+                            Reduce means using less and in this case,
+                            creating less waste.
+                        </p>
+
+                        <ul>
+                            <li>Turn off lights when not in use</li>
+                            <li>Use less plastic or avoid it when possible</li>
+                            <li>Only buy necessities</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+
+            <!-- REUSE SECTION -->
+            <div class="col-md-6 col-lg-3">
+                <section class="card h-100 shadow" id="reuse">
+
+                    <img src="reuse.jpg"
+                         class="card-img-top"
+                         alt="Reusable shopping bags">
+
+                    <div class="card-body">
+                        <h2 class="card-title">2. Reuse</h2>
+
+                        <p class="card-text">
+                            Reuse means using things repeatedly instead
+                            of throwing them away after 1 or 2 uses.
+                        </p>
+
+                        <ul>
+                            <li>Use reusable shopping bags</li>
+                            <li>Refill water bottles</li>
+                            <li>Donate old clothes</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+
+            <!-- RECYCLE SECTION -->
+            <div class="col-md-6 col-lg-3">
+                <section class="card h-100 shadow" id="recycle">
+
+                    <img src="recycle.jpg"
+                         class="card-img-top"
+                         alt="Recycling bins">
+
+                    <div class="card-body">
+                        <h2 class="card-title">3. Recycle</h2>
+
+                        <p class="card-text">
+                            Recycle means turning old materials
+                            to make new products.
+                        </p>
+
+                        <ul>
+                            <li>Recycle paper and cardboard</li>
+                            <li>Recycle glass bottles</li>
+                            <li>Sort rubbish into the correct bins</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+
+            <!-- ECO TIPS SECTION -->
+            <div class="col-md-6 col-lg-3">
+                <section class="card h-100 shadow" id="tips">
+
+                    <img src="eco.jpg"
+                         class="card-img-top"
+                         alt="Eco-friendly environment">
+
+                    <div class="card-body">
+                        <h2 class="card-title">Eco-friendly Tips</h2>
+
+                        <p class="card-text">
+                            Click the button to get an environmental tip.
+                        </p>
+
+                        <button class="btn btn-success"
+                                onclick="showTip()">
+                            Show Me a Tip
+                        </button>
+
+                        <p id="tip" class="mt-3 fw-bold">
+                            Your tip will appear here!
+                        </p>
+                    </div>
+                </section>
+	<script>				
+		function showTip() {
+
+		const tips = [
+			"Turn off lights when leaving a room!",
+			"Use reusable shopping bags instead of plastic!",
+			"Recycle paper, glass and plastic!",
+			"Save water by turning off taps!",
+			"Plant trees to help the environment!",
+			"Walk or cycle instead of driving when possible!"
+		];
+
+    const randomTip = Math.floor(Math.random() * tips.length);
+
+    document.getElementById("tip").innerHTML = tips[randomTip];
+}
+	</script>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="text-center text-white py-4">
+        <p>Let's work together for a greener planet!</p>
+
+        <p>
+            Website created by:
+            <strong>Tara-Lee Pitter </strong>
+        </p>
+
+        <p>&copy; 2026 Reduce, Reuse, Recycle</p>
+    </footer>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+    <!-- Your JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
+
+
